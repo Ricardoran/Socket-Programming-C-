@@ -6,7 +6,7 @@ Haoran Zhang
 2088-8017-38
 
 ------------------------------------------------------------------
--- What I have done
+### What I have done
 In this assignment, I used c++ to do socket communication between client and four servers. 
 Client send queries to aws(using TCP) about calcultating the shortest distance between source and destination in a map.
 aws received queries from client and send mapid to serverA and B and C (using UDP)to do the checking and calcultation.
@@ -30,7 +30,7 @@ Work flow is below:
     else, mapid does not exist in both A and B, send error message to client
 
 --------------------------------------------------------------------------
--- Program structure
+### Program structure
 1. client.cpp: send query message to aws
     message format is <mapid> <src> <dest> <filesize>
     for example: ./client a 1 2 3
@@ -60,7 +60,7 @@ Work flow is below:
 5. serverC.cpp: receive mapinfo from aws and calcultate shortest distance and delay.
 
 -------------------------------------------------------------------------
--- Format of all messages
+### Format of all messages
 
     Compile:
     just type 'make'
@@ -75,7 +75,7 @@ Work flow is below:
 
 
 ---------------------------------------------------------------------------
--- Known limitations so far
+### Known limitations so far
     The program runs well on MacOS and ubuntu. But it does have some limitations.
     
     1.one of the limits is that in serverC, the transmission delay result is not always true.
@@ -94,28 +94,33 @@ Work flow is below:
 
 
 ---------------------------------------------------------------
--- Reused Code
+### Reused Code
 
 serverC.cpp:
+
     https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
     https://blog.csdn.net/HEYIAMCOMING/article/details/76535677
     https://www.geeksforgeeks.org/printing-paths-dijkstras-shortest-path-algorithm/
     Beej’s Guide to Network Programming.pdf
 
 serverA.cpp and serverB.cpp:
+
     Beej’s Guide to Network Programming.pdf
     http://www.cplusplus.com/reference/fstream/ifstream/ifstream/
     http://www.cplusplus.com/reference/algorithm/find/?kw=find
     https://blog.csdn.net/u010429424/article/details/75332700
 
 aws.cpp:
+
     http://www.cplusplus.com/reference/cstring/strtok/?kw=strtok
     Beej’s Guide to Network Programming.pdf
 
 
 client.cpp:
+
     Beej’s Guide to Network Programming.pdf
     
 makefile:
+
     Beej's Guide
     https://www.cs.swarthmore.edu/%7Enewhall/unixhelp howto_makefiles.html
