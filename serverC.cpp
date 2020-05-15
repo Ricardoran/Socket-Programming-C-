@@ -1,7 +1,6 @@
 /*
 ** serverC.cpp
     created by Haoran Zhang
-    2088-8017-38
  * Ref: The setup code structure is mainly copied from beej's pdf
 	https://beej.us/guide/bgnet/examples/server.c
 	https://beej.us/guide/bgnet/examples/client.c
